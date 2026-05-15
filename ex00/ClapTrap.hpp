@@ -6,7 +6,7 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 21:08:47 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/14 21:19:50 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/05/15 13:47:43 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class ClapTrap
 {
-	protected:
+	private:
 		std::string		_name;
 		unsigned int	_hitPoints;
 		unsigned int	_energyPoints;
