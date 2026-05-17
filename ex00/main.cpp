@@ -1,22 +1,58 @@
 #include "ClapTrap.hpp"
+#include <iostream>
 
-int main()
+int	main(void)
 {
-    ClapTrap hero("Hero");
-    ClapTrap enemy("Enemy");
+	std::cout << "===== Basic Construction =====" << std::endl;
 
-    hero.attack("Enemy");
-    enemy.takeDamage(0);
+	ClapTrap	a("Alpha");
+	ClapTrap	b("Bravo");
 
-    hero.beRepaired(5);
-    enemy.attack("Hero");
-    hero.takeDamage(5);
+	std::cout << std::endl;
 
-    hero.attack("Enemy");
-    hero.beRepaired(3);
+	std::cout << "===== Basic Actions =====" << std::endl;
 
-    ClapTrap copyHero(hero);
-    copyHero.attack("Enemy");
+	a.attack("Bravo");
+	b.takeDamage(0);
 
-    return 0;
+	b.beRepaired(5);
+
+	std::cout << std::endl;
+
+	std::cout << "===== Damage and Death =====" << std::endl;
+
+	a.takeDamage(5);
+	a.takeDamage(5);
+	a.takeDamage(1);
+
+	a.attack("Someone");
+	a.beRepaired(10);
+
+	std::cout << std::endl;
+
+	std::cout << "===== Energy Exhaustion =====" << std::endl;
+
+	ClapTrap	c("Charlie");
+
+	for (int i = 0; i < 11; i++)
+		c.attack("Target");
+
+	std::cout << std::endl;
+
+	std::cout << "===== Copy Constructor =====" << std::endl;
+
+	ClapTrap	d(c);
+
+	std::cout << std::endl;
+
+	std::cout << "===== Assignment Operator =====" << std::endl;
+
+	ClapTrap	e;
+	e = b;
+
+	std::cout << std::endl;
+
+	std::cout << "===== End of Program =====" << std::endl;
+
+	return (0);
 }
