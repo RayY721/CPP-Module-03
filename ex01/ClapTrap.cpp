@@ -6,7 +6,7 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 13:42:37 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/17 17:01:54 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/05/17 17:40:01 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,13 @@ void ClapTrap::attack(const std::string& target)
 		return;
 	}
 	_energyPoints--;
-	std::cout << "ClapTrap " 
+	std::cout << "ClapTrap "
 				<< _name
-				<< " attacks "
+				<< " (HP: "
+				<< _hitPoints
+				<< ", EP: "
+				<<_energyPoints
+				<< ") attacks "
 				<< target
 				<< ", causing "
 				<< _attackDamage
@@ -95,6 +99,12 @@ void ClapTrap::takeDamage(unsigned int amount)
 	else
 	{
 		_hitPoints -= amount;
+		std::cout << "ClapTrap "
+					<< _name
+					<< " now has "
+					<< _hitPoints
+					<< " HP"
+					<< std::endl;
 	}
 }
 
@@ -109,11 +119,15 @@ void ClapTrap::beRepaired(unsigned int amount)
 		return;
 	}
 	_energyPoints--;
-	std::cout << "ClapTrap " 
-				<< _name 
-				<< " is repaired for " 
-				<< amount 
-				<< " points!" 
-				<< std::endl;
 	_hitPoints += amount;
+	std::cout << "ClapTrap "
+				<< _name
+				<< " is repaired for "
+				<< amount
+				<< " points! (HP: "
+				<< _hitPoints
+				<< ", EP: "
+				<< _energyPoints
+				<< ")"
+				<< std::endl;
 }
