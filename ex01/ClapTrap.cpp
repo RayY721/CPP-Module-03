@@ -6,7 +6,7 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 13:42:37 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/17 16:39:31 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/05/17 17:01:54 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
+	std::cout << "ClapTrap assignment operator has been called!" << std::endl;
 	if (this != &other)
 	{
 		_name = other._name;
@@ -46,7 +47,6 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 		_energyPoints = other._energyPoints;
 		_attackDamage = other._attackDamage;
 	}
-	std::cout << "ClapTrap assignment operator has been called!" << std::endl;
 	return (*this);
 }
 
