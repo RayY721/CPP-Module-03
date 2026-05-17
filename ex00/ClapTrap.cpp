@@ -6,25 +6,27 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 21:18:30 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/17 15:09:36 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/05/17 16:38:18 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap(void) : _name("Default"), 
-						_hitPoints(10), 
-						_energyPoints(10), 
-						_attackDamage(0)
+ClapTrap::ClapTrap(void)
+	: _name("Default"), 
+	_hitPoints(10), 
+	_energyPoints(10), 
+	_attackDamage(0)
 {
 	std::cout << "ClapTrap " << _name << " has been created!" << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string& name) : _name(name), 
-						_hitPoints(10), 
-						_energyPoints(10), 
-						_attackDamage(0)
+ClapTrap::ClapTrap(const std::string& name)
+	: _name(name), 
+	_hitPoints(10), 
+	_energyPoints(10), 
+	_attackDamage(0)
 {
 	std::cout << "ClapTrap " << _name << " has been created!" << std::endl;
 }
