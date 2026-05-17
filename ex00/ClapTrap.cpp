@@ -6,14 +6,14 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 21:18:30 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/14 21:58:19 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/05/17 15:09:36 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap() : _name("Default"), 
+ClapTrap::ClapTrap(void) : _name("Default"), 
 						_hitPoints(10), 
 						_energyPoints(10), 
 						_attackDamage(0)
@@ -47,7 +47,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 	return *this;
 }
 
-ClapTrap::~ClapTrap()
+ClapTrap::~ClapTrap(void)
 {
 	std::cout << "ClapTrap " << _name << " has been destroyed!" << std::endl;
 }

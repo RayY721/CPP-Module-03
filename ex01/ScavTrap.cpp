@@ -6,19 +6,19 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 13:50:18 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/15 14:16:30 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/05/17 15:14:26 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include <iostream>
 
-ScavTrap::ScavTrap() : ClapTrap()
+ScavTrap::ScavTrap(void) : ClapTrap()
 {
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
-	std::cout << "ScavTrap " << _name << " has been created!" << std::endl;
+	std::cout << "ScavTrap default constructor has been called!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
@@ -26,25 +26,25 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
-	std::cout << "ScavTrap " << _name << " has been created!" << std::endl;
+	std::cout << "ScavTrap constructor with name has been called!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
 {
-	std::cout << "ScavTrap " << _name << " has been copied!" << std::endl;
+	std::cout << "ScavTrap copy constructor has been called!" << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 {
 	if (this != &other)
 		ClapTrap::operator=(other);
-	std::cout << "ScavTrap " << _name << " has been copied andassigned!" << std::endl;
+	std::cout << "ScavTrap assignment operator has been called!" << std::endl;
 	return (*this);
 }
 
-ScavTrap::~ScavTrap()
+ScavTrap::~ScavTrap(void)
 {
-	std::cout << "ScavTrap " << _name << " has been destroyed!" << std::endl;
+	std::cout << "ScavTrap destructor has been called!" << std::endl;
 }
 
 void ScavTrap::attack(const std::string& target)
@@ -66,7 +66,7 @@ void ScavTrap::attack(const std::string& target)
 				<< " damage!" << std::endl;             
 }
 
-void ScavTrap::guardGate()
+void ScavTrap::guardGate(void)
 {
 	std::cout << "ScavTrap " << _name 
 				<< " has entered Gate keeper mode!" 

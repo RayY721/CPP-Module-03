@@ -6,7 +6,7 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 16:26:42 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/15 16:48:29 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/05/17 15:28:14 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ FragTrap::FragTrap() : ClapTrap()
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-	std::cout << "FragTrap default constructor called" << std::endl;
+	std::cout << "FragTrap default constructor has been called!" << std::endl;
 }
 
 FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
@@ -26,17 +26,17 @@ FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-	std::cout << "FragTrap parameterized constructor called" << std::endl;
+	std::cout << "FragTrap constructor with name has been called!" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
 {
-	std::cout << "FragTrap copy constructor called" << std::endl;
+	std::cout << "FragTrap copy constructor has been called!" << std::endl;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& other)
 {
-	std::cout << "FragTrap copy assignment operator called" << std::endl;
+	std::cout << "FragTrap assignment operator has been called!" << std::endl;
 	if (this != &other)
 		ClapTrap::operator=(other);
 	return *this;
@@ -44,7 +44,7 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap destructor called" << std::endl;
+	std::cout << "FragTrap destructor has been called!" << std::endl;
 }
 
 void	FragTrap::attack(const std::string& target)

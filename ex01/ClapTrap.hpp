@@ -6,7 +6,7 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 13:42:45 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/15 13:42:46 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/05/17 15:10:37 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ class ClapTrap
 		unsigned int	_attackDamage;
 
 	public:
-		ClapTrap();
+		ClapTrap(void);
 		ClapTrap(const std::string& name);
 		ClapTrap(const ClapTrap& other);
 		ClapTrap& operator=(const ClapTrap& other);
-		~ClapTrap();
+		~ClapTrap(void);
 		void	attack(const std::string& target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
