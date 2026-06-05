@@ -6,7 +6,7 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 14:15:49 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/17 16:47:01 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/06/05 18:26:47 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ DiamondTrap::DiamondTrap(const std::string& name)
 /* The ScavTrap(other) and FragTrap(other) do not contribute additional data copying */
 DiamondTrap::DiamondTrap(const DiamondTrap& other)
 	: ClapTrap(other),
-	ScavTrap(other),
 	FragTrap(other),
+	ScavTrap(other),
 	_name(other._name)
 {
 	std::cout << "DiamondTrap copy constructor has been called!" << std::endl;
