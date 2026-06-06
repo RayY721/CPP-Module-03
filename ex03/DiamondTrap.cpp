@@ -6,7 +6,7 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 14:15:49 by kuyu              #+#    #+#             */
-/*   Updated: 2026/06/05 18:26:47 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/06/06 20:43:41 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,10 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 {
 	std::cout << "DiamondTrap assignment operator has been called!" << std::endl;
 	if (this != &other)
+	{
+		ClapTrap::operator=(other);
 		_name = other._name;
+	}
 	return (*this);	
 }
 
